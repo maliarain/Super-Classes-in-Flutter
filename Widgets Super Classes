@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+
+abstract class SuperBaseFunctions extends StatelessWidget {
+
+  static Text getTextfromHere(
+      String txtHere, Color clr, double fontSiize, FontWeight fontWight) {
+    return Text(
+      txtHere,
+      style: TextStyle(color: clr, fontSize: fontSiize, fontWeight: fontWight),
+    );
+  }
+
+  static Image getImagefromHere(String imageAddress) {
+    return Image.asset(imageAddress);
+  }
+
+  static ElevatedButton getElevatedButton(
+      Icon icon, String text, GestureDetector onTap) {
+    return ElevatedButton.icon(onPressed: () {}, icon: icon, label: Text(text));
+  }
+}
